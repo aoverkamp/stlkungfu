@@ -1,0 +1,104 @@
+---
+layout: layouts/base.html
+title: "St. Louis Southern Praying Mantis Kung Fu Academy :: Gallery"
+description: "St. Louis Southern Praying Mantis Kung Fu Academy Video and Photo Gallery"
+bannerId: "07"
+bannerAlt: "STL Kung Fu School of Southern Praying Mantis"
+---
+
+<style>
+    .gallery {
+        .photos img {
+            width: 100%;
+        }
+        @media screen and (min-width: 700px) {
+            .videos, 
+            .photos {
+                margin-bottom: 3rem;
+                display: grid;
+                gap: 1rem;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media screen and (min-width: 900px) {
+            .videos, 
+            .photos {
+                grid-template-columns: repeat(4, 1fr);
+            }    
+        }
+    }
+</style>
+<!-- Gallery -->
+<section  class="gallery">   
+    <h2>Videos</h2>     
+    <div class="videos">
+        <!-- Row 1 -->
+        <div class="responsive-media">
+            <iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/9ofgJ8pNJbs"></iframe>
+        </div>
+        <div class="responsive-media">
+            <iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/SCfbFgUqzTI"></iframe>
+        </div>
+        <div class="responsive-media">
+            <iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/vxd26VZ8C9Q"></iframe>
+        </div>
+        <div class="responsive-media">
+            <iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/-8dA-GuMYZo"></iframe>
+        </div>
+        <!-- Row 2 -->
+        <div class="responsive-media">
+            <iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/AGT1-bRffAg"></iframe>
+        </div>
+        <div class="responsive-media">
+            <iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/NLgPqo_nsY8"></iframe>
+        </div>
+        <div class="responsive-media">
+            <iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/oHriPxHdKhI"></iframe>
+        </div>
+        <div class="responsive-media">
+            <iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/bePg83-J3OU"></iframe>
+        </div>
+        <!-- Row 3 -->
+        <div class="responsive-media">
+            <iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/yAziqeqgrm0"></iframe>
+        </div>
+        <div class="responsive-media">
+            <iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/L_8Uxjp2JJ0"></iframe>
+        </div>
+        <div class="responsive-media">
+            <iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/lxKEgEiwFfA"></iframe>
+        </div>
+        <div class="responsive-media">
+            <iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/jMm7BvLogc8"></iframe>
+        </div>
+    </div>
+    <h2>Photos</h2>     
+    <div id="photoGallery" class="photos">
+		<a data-fancybox="gallery" data-caption="School Banner" href="/assets/images/gallery/school-banner.jpg">
+            <img alt="Shaw GTA RP commission"  src="/assets/images/gallery/school-banner.jpg">
+        </a> 
+        <a data-fancybox="gallery" data-caption="Lion Dance Visit at St. Louis History Museum 2024" href="/assets/images/gallery/lion-dance-visit-02-08-24.jpeg">
+            <img alt="Lion Dance Visit at St. Louis History Museum 2024"  src="/assets/images/gallery/lion-dance-visit-02-08-24.jpeg">
+        </a> 
+        <a data-fancybox="gallery" data-caption="Chinese New Year Group Photo 02/10/24" href="/assets/images/gallery/cny-02-10-24.jpeg">
+            <img alt="Chinese New Year Group Photo 02/10/24"  src="/assets/images/gallery/cny-02-10-24.jpeg">
+        </a> 
+        <a data-fancybox="gallery" data-caption="Seminar Group Photo 10/19/21" href="/assets/images/gallery/seminar-10-19-21.jpeg">
+            <img alt="Seminar Group Photo 10/19/21"  src="/assets/images/gallery/seminar-10-19-21.jpeg">
+        </a>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js"></script>
+<script>
+	
+	Fancybox.bind("#photoGallery a", {
+		groupAll: true,
+		
+		// Disable image zoom animation on opening and closing
+		Images : {
+		zoom : false
+		}
+	});
+	
+</script>

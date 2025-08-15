@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        {% include "basehead.html" %}
+        {% block head %}{% endblock %}
+    </head>
+    <body>
+        <div class="site-container">
+            <!--  Site Header (JQuery) --->
+            <header class="site-header">
+                <section class="navbar">
+                    <div class="nav-container">
+                        <div class="brand">
+                            <a title="St. Louis Southern Praying Mantis Kung Fu Academy" href="/">
+                                <picture>
+                                    <source srcset="/assets/images/stl-kungfu-logo.png" media="(min-width: 768px)">
+                                    <img src="/assets/images/stlkungfu-mobile-logo.webp" alt="St. Louis Southern Praying Mantis Kung Fu Academy">
+                                </picture>
+                            </a>
+                        </div>
+                        <nav>
+                            <div class="nav-mobile"><a id="nav-toggle" href="#"><span></span></a></div>
+                            <ul class="nav-list">
+                                <li class=" {{ 'breadcrumb' if '/' == page.url }}"  >
+                                    <a href="/">Home</a>
+                                </li>
+                                <li class="{{ 'breadcrumb' if '/about' in page.url }}">
+                                    <a href="#">About</a>
+                                    <ul class="nav-dropdown">
+                                        <li class="{{ 'breadcrumb' if '/about/' == page.url }}">
+                                            <a href="/about">Teaching Philosophy</a>
+                                        </li>
+                                        <li class="{{ 'breadcrumb' if '/system' in page.url }}">
+                                        <a href="/about/system">System</a>
+                                        </li>
+                                        <li class="{{ 'breadcrumb' if '/training' in page.url }}">
+                                        <a href="/about/training">Training Curriculum</a>
+                                        </li>
+                                        <li class="{{ 'breadcrumb' if '/sifu-pete-scheers' in page.url }}">
+                                        <a href="/about/sifu-pete-scheers">Sifu Pete Scheers</a>
+                                        </li>
+                                        <!--<li class="{{ 'breadcrumb' if '/instructors' in page.url }}">
+                                        <a href="/about/instructors">Instructors</a>
+                                        </li>-->
+                                    </ul>
+                                </li>
+                                <li class="{{ 'breadcrumb' if '/programs' in page.url }}">
+                                    <a href="/programs">Programs</a>
+                                </li>
+                                <li class="{{ 'breadcrumb' if '/schedule' in page.url }}">
+                                    <a href="/schedule">Schedule</a>
+                                </li>
+                                <li class="{{ 'breadcrumb' if '/gallery' in page.url }}">
+                                    <a href="/gallery">Gallery</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </section>
+
+                <!-- Banner -->
+                <section class="banner">
+                    <picture>
+                        <source srcset="/assets/images/hero/{{bannerId}}-Banner-Desktop-1900x600-min.png" media="(min-width: 1170px)">
+                        <source srcset="/assets/images/hero/{{bannerId}}-Banner-Tablet-768x600-min.png" media="(min-width: 768px)">
+                        <img src="/assets/images/hero/{{bannerId}}-Banner-Mobile-480x600-min.png" alt="{{bannerAlt}}" class="banner--image">
+                    </picture>
+                </section>
+            </header>
+            <!--  Site Main -->
+            <main class="site--main">
+            {{ content | safe }}
+            </main>
+            <!--  Site Footer -->
+            <footer class="site-footer">
+                <div itemtype="http://schema.org/Organization" itemscope="">
+                <span itemtype="http://schema.org/PostalAddress" itemscope="" itemprop="address">
+                    <span itemprop="streetAddress">5828 Southwest</span>
+                    <span itemprop="addressLocality">St. Louis</span>, <span itemprop="addressRegion">MO</span>
+                    <span itemprop="postalCode">63139</span>
+                </span>
+                <a href="tel:+13144840507" target="_blank" itemprop="telephone">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M144 128C144 92.7 172.7 64 208 64L432 64C467.3 64 496 92.7 496 128L496 512C496 547.3 467.3 576 432 576L208 576C172.7 576 144 547.3 144 512L144 128zM208 128L208 432L432 432L432 128L208 128zM320 536C337.7 536 352 521.7 352 504C352 486.3 337.7 472 320 472C302.3 472 288 486.3 288 504C288 521.7 302.3 536 320 536z"/></svg> 314-484-0507 </a>
+                <a href="mailto:pscheers94@gmail.com" target="_blank" itemprop="email">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M125.4 128C91.5 128 64 155.5 64 189.4C64 190.3 64 191.1 64.1 192L64 192L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 192L575.9 192C575.9 191.1 576 190.3 576 189.4C576 155.5 548.5 128 514.6 128L125.4 128zM528 256.3L528 448C528 456.8 520.8 464 512 464L128 464C119.2 464 112 456.8 112 448L112 256.3L266.8 373.7C298.2 397.6 341.7 397.6 373.2 373.7L528 256.3zM112 189.4C112 182 118 176 125.4 176L514.6 176C522 176 528 182 528 189.4C528 193.6 526 197.6 522.7 200.1L344.2 335.5C329.9 346.3 310.1 346.3 295.8 335.5L117.3 200.1C114 197.6 112 193.6 112 189.4z"/></svg> Email </a>
+                <a href="https://www.facebook.com/Southern-Praying-Mantis-Kung-Fu-St-Louis-MO-Branch-114725781904437/" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M576 320C576 178.6 461.4 64 320 64C178.6 64 64 178.6 64 320C64 440 146.7 540.8 258.2 568.5L258.2 398.2L205.4 398.2L205.4 320L258.2 320L258.2 286.3C258.2 199.2 297.6 158.8 383.2 158.8C399.4 158.8 427.4 162 438.9 165.2L438.9 236C432.9 235.4 422.4 235 409.3 235C367.3 235 351.1 250.9 351.1 292.2L351.1 320L434.7 320L420.3 398.2L351 398.2L351 574.1C477.8 558.8 576 450.9 576 320z"/></svg> Facebook </a>
+                <a href="https://www.youtube.com/user/stlkungfu" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M581.7 188.1C575.5 164.4 556.9 145.8 533.4 139.5C490.9 128 320.1 128 320.1 128C320.1 128 149.3 128 106.7 139.5C83.2 145.8 64.7 164.4 58.4 188.1C47 231 47 320.4 47 320.4C47 320.4 47 409.8 58.4 452.7C64.7 476.3 83.2 494.2 106.7 500.5C149.3 512 320.1 512 320.1 512C320.1 512 490.9 512 533.5 500.5C557 494.2 575.5 476.3 581.8 452.7C593.2 409.8 593.2 320.4 593.2 320.4C593.2 320.4 593.2 231 581.8 188.1zM264.2 401.6L264.2 239.2L406.9 320.4L264.2 401.6z"/></svg> YouTube </a>
+                </div>
+                <div>
+                <span id="dnn_ctl02_ctl00_lblCopyright" class="SkinObject">Copyright 2025 by St. Louis Southern Praying Mantis Kung Fu Academy. All rights reserved.</span>
+                </div>
+                <!--<div><small> design & built by <a href="">aok</a></small></div>-->
+            </footer>
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script id="rendered-js">
+            (function ($) {// Begin jQuery
+                $(function () {// DOM ready
+                // If a link has a dropdown, add sub menu toggle.
+                $('nav ul li a:not(:only-child)').click(function (e) {
+                    $(this).siblings('.nav-dropdown').toggle();
+                    // Close one dropdown when selecting another
+                    $('.nav-dropdown').not($(this).siblings()).hide();
+                    e.stopPropagation();
+                    e.preventDefault();
+                });
+                // Clicking away from dropdown will remove the dropdown class
+                $('html').click(function () {
+                    $('.nav-dropdown').hide();
+                });
+                // Toggle open and close nav styles on click & Hamburger to X toggle
+                $('#nav-toggle').click(function (e) {
+                    $('nav ul').slideToggle();
+                    this.classList.toggle('active');
+                    e.preventDefault ();
+                });
+                }); // end DOM ready
+            })(jQuery); // end jQuery
+        </script>
+    </body>
+</html>
