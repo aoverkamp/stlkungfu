@@ -228,20 +228,18 @@ main {
 
 /*--- Intro ---*/
 .intro {
-    &.intro__home {
-        h1 {
-            margin-bottom: 0;
-        }
-        h2 {
-            margin-bottom: 0;
-        }
-        h3 {
-            border-top: 0.125rem solid var(--green);
-            display: inline-block;
-        }
-        p {
-            max-width: 50rem;
-        }
+    h1 {
+        margin-bottom: 0;
+    }
+    h2 {
+        margin-bottom: 0;
+    }
+    h3 {
+        border-top: 0.125rem solid var(--green);
+        display: inline-block;
+    }
+    p {
+        max-width: 50rem;
     }
 }
 
