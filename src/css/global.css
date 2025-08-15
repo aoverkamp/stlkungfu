@@ -133,8 +133,6 @@ main {
         display: flex;
         flex-direction: column;
         gap: 2rem;
-
-        .col {}
     }
 }
 
@@ -352,12 +350,11 @@ blockquote {
     p { color: var(--color__text); }
 }
 
-cite {}
 mark, ::selection {
     background: var(--red);
     color: var(--white);
 }
-code {}
+
 pre {
     background: var(--color__text);
     padding: 1em;
@@ -371,7 +368,6 @@ a {
     &:hover {
         color: var(--red);
     }
-    &:visited {}
 }
 
 /*----- Navbar -----*/
